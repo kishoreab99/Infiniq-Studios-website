@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Insights & Resources | Infiniq Studios</title>
+<meta name="description" content="Practical writing from the people who ship. No fluff, no listicles — just what's working.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-shell">
+    <a href="index.html" class="brand">
+      <svg width="40.6" height="41.42" viewBox="0 0 235 238" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Purple square -->
+  <path
+    d="M40 20H69C70.657 20 72 21.343 72 23V49C72 50.657 70.657 52 69 52H40C38.343 52 37 50.657 37 49V23C37 21.343 38.343 20 40 20Z"
+    fill="#5F2DF1"
+  />
+
+  <!-- Black vertical shape -->
+  <path
+    d="M43 64H68C71.866 64 75 67.134 75 71V186
+    C69 184 62 180 54 176
+    L43 170
+    C38.5 167.5 36 164 36 159
+    V71
+    C36 67.134 39.134 64 43 64Z"
+    fill="#0E0F0F"
+  />
+
+  <!-- Purple upper shape -->
+  <path
+    d="M98 69
+    L123 59
+    C128 57 132 57 137 60
+    L193 91
+    C196 93 198 96 198 100
+    V128
+    C198 131 195 133 192 131
+    L98 76
+    C95 74 95 71 98 69Z"
+    fill="#5F2DF1"
+  />
+
+  <!-- Black lower shape -->
+  <path
+    d="M98 146
+    L148 121
+    C150 120 152 120 154 121
+    L195 143
+    C197 144 198 146 198 149
+    V155
+    C198 157 197 159 195 160
+    L154 179
+    C151 180 148 180 145 178
+    L98 152
+    C95 150 95 148 98 146Z"
+    fill="#0E0F0F"
+  />
+
+</svg>
+    
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary btn-sm">Get Started</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-cta"><a href="contact.html" class="btn btn-primary btn-block">Get Started</a></div>
+  </div>
+</header>
+
+<section class="hero hero-sunset" style="padding-bottom:110px;">
+  <div class="hero-inner">
+    <span class="eyebrow on-dark" style="
+    border: 2px solid rgba(255,255,255,0.35);
+    border-radius: 10px;
+    padding: 7px 10px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+">
+    Our Blog
+</span>
+    <h1 style="font-size:clamp(2rem,4.6vw,3rem);">Insights & Resources</h1>
+    <p class="lede">Practical writing from the people who ship. No fluff, no listicles — just what's working.</p>
+  </div>
+</section>
+
+<div class="container blog-toolbar">
+  <div class="search-box">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6b7a73" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    <input type="text" id="blog-search" placeholder="Search articles...">
+  </div>
+  <div class="category-row">
+    <button class="category-pill active" data-category="all">All</button>
+    <button class="category-pill" data-category="website">Website</button>
+    <button class="category-pill" data-category="marketing">Marketing</button>
+    <button class="category-pill" data-category="ai">AI</button>
+    <button class="category-pill" data-category="business">Business</button>
+    <button class="category-pill" data-category="design">Design</button>
+    <button class="category-pill" data-category="development">Development</button>
+  </div>
+</div>
+
+<section class="section" style="padding-top:34px;">
+  <div class="container">
+
+    <h2 class="reveal" style="font-size:1.3rem; margin-bottom:22px;">Featured article</h2>
+    <div class="featured-article reveal">
+      <div class="thumb"></div>
+      <div>
+        <span class="article-tag">Startup</span>
+        <span class="article-date">April 2026</span>
+        <h3>MVP in 6 weeks: an engineering guide</h3>
+        <p>A repeatable process for shipping software that solves real problems, fast.</p>
+        <a href="404.html" class="link-arrow" style="color:#FF8A3B !important;">Read article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3B" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+   <div class="blog-results-heading" id="blog-results-heading">
+  <h2>Latest articles</h2>
+  <span id="blog-results-count"></span>
+</div>
+
+<div class="article-grid" data-blog-grid>
+      <article class="article-card reveal" data-category="development">
+        <div class="thumb thumb-1"></div>
+        <div class="body">
+          <span class="article-tag" style="background:var(--cream); color:#a6af9a" >Development</span>
+          <span class="article-date">April 2026</span>
+          <h3>Building websites that convert: a 2026 playbook</h3>
+          <p>The frameworks, patterns, and psychology behind pages turn visitors into customers.</p>
+          <a href="404.html" class="link-arrow">Read article <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="lightgreen" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="article-card reveal" data-category="website">
+        <div class="thumb thumb-2"></div>
+        <div class="body">
+          <span class="article-tag" style="background:var(--cream); color:#a6af9a" >SEO</span>
+          <span class="article-date">April 2026</span>
+          <h3>Technical SEO: what still matters in 2026</h3>
+          <p>Core Web Vitals, structured data, and the fundamentals search engines quietly reward.</p>
+          <a href="404.html" class="link-arrow">Read article <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="lightgreen" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="article-card reveal" data-category="design">
+        <div class="thumb thumb-3"></div>
+        <div class="body">
+          <span class="article-tag" style="background:var(--cream); color:#a6af9a" >UI/UX</span>
+          <span class="article-date">April 2026</span>
+          <h3>Design systems for small teams</h3>
+          <p>How to build a design system that scales without eating your product roadmap.</p>
+          <a href="404.html" class="link-arrow">Read article <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="lightgreen" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="article-card reveal" data-category="marketing">
+        <div class="thumb thumb-4"></div>
+        <div class="body">
+          <span class="article-tag" style="background:var(--cream); color:#a6af9a" >Marketing</span>
+          <span class="article-date">April 2025</span>
+          <h3>Full-funnel marketing on a startup budget</h3>
+          <p>Channels, sequencing, and the traps most young companies fall into.</p>
+          <a href="404.html" class="link-arrow">Read article <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="lightgreen" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="article-card reveal" data-category="ai">
+        <div class="thumb thumb-5"></div>
+        <div class="body">
+          <span class="article-tag" style="background:var(--cream); color:#a6af9a" >AI</span>
+          <span class="article-date">April 2025</span>
+          <h3>Where AI actually helps digital teams</h3>
+          <p>Practical AI workflows we use across design, code, and marketing.</p>
+          <a href="404.html" class="link-arrow">Read article <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="lightgreen" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="article-card reveal" data-category="business">
+        <div class="thumb thumb-6"></div>
+        <div class="body">
+          <span class="article-tag" style="background:var(--cream); color:#a6af9a" >Business</span>
+          <span class="article-date">April 2025</span>
+          <h3>Pricing web projects: fixed vs retainer</h3>
+          <p>A repeatable process for pricing work that solves real problems, fast.</p>
+          <a href="404.html" class="link-arrow">Read article <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="lightgreen" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+    </div>
+
+   <div class="no-results" id="blog-no-results">
+  <div class="no-results-icon">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+      <circle cx="10.8" cy="10.8" r="6.8"
+        stroke="#12B94B" stroke-width="2"/>
+      <path d="M16 16L21 21"
+        stroke="#12B94B" stroke-width="2"
+        stroke-linecap="round"/>
+      <path d="M8.5 8.5L13 13M13 8.5L8.5 13"
+        stroke="#12B94B" stroke-width="2"
+        stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <h3>No articles match that search</h3>
+
+  <p>
+    Try a different keyword, or clear the filters to see everything we've published.
+  </p>
+
+  <button type="button" id="clear-blog-filters">
+    Clear filters
+  </button>
+</div>
+
+    <div class="newsletter-box reveal">
+      <div class="icon-circle"><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.8902 16.7526C22.038 14.5628 22.1157 12.2934 22.1157 9.96805C22.1157 9.0263 22.103 8.09367 22.0781 7.17178C22.0605 6.5242 21.8345 5.89484 21.4221 5.37261C19.8503 3.38213 18.5982 2.14466 16.5346 0.664156C15.9676 0.257291 15.2716 0.0365521 14.5555 0.0219987C13.8374 0.00740701 13.0875 0 12.2864 0C9.86132 0 7.90511 0.0678978 5.88068 0.197283C4.15851 0.307361 2.79075 1.58183 2.68261 3.1834C2.53476 5.37333 2.45703 7.64266 2.45703 9.96805C2.45703 12.2934 2.53476 14.5628 2.68261 16.7526C2.79075 18.3543 4.15851 19.6288 5.88068 19.7387C7.90511 19.8682 9.86132 19.9361 12.2864 19.9361C14.7114 19.9361 16.6677 19.8682 18.6921 19.7387C20.4142 19.6288 21.7821 18.3543 21.8902 16.7526Z" stroke="url(#paint0_linear_130_2032)" stroke-width="2.73416" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.6234 19.1747C18.7651 17.0691 18.8396 14.887 18.8396 12.6511C18.8396 11.7455 18.8275 10.8488 18.8035 9.96238C18.7867 9.33968 18.57 8.73455 18.1749 8.23239C16.6686 6.31845 15.4687 5.12858 13.491 3.70501C12.9475 3.31381 12.2807 3.10155 11.5944 3.08755C10.9062 3.07353 10.1875 3.06641 9.4198 3.06641C7.09576 3.06641 5.22105 3.1317 3.281 3.25611C1.63058 3.36195 0.319814 4.5874 0.216172 6.12736C0.074482 8.23308 0 10.4152 0 12.6511C0 14.887 0.074482 17.0691 0.216172 19.1747C0.319814 20.7148 1.63058 21.9402 3.281 22.046C5.22105 22.1704 7.09576 22.2357 9.4198 22.2357C11.7439 22.2357 13.6186 22.1704 15.5586 22.046C17.2089 21.9402 18.5198 20.7148 18.6234 19.1747Z" fill="#E9EEEE" stroke="url(#paint1_linear_130_2032)" stroke-width="2.73416" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.7334 13.0352H13.1054" stroke="url(#paint2_linear_130_2032)" stroke-width="2.97192" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.7334 17.636H13.1054M5.7334 7.66797H10.1959" stroke="url(#paint3_linear_130_2032)" stroke-width="2.97192" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_130_2032" x1="12.2864" y1="0" x2="12.2864" y2="19.9361" gradientUnits="userSpaceOnUse">
+<stop stop-color="#91A9AA"/>
+<stop offset="1" stop-color="#315D5F"/>
+</linearGradient>
+<linearGradient id="paint1_linear_130_2032" x1="9.41979" y1="3.06641" x2="9.41979" y2="22.2357" gradientUnits="userSpaceOnUse">
+<stop stop-color="#91A9AA"/>
+<stop offset="1" stop-color="#315D5F"/>
+</linearGradient>
+<linearGradient id="paint2_linear_130_2032" x1="9.41941" y1="12.0352" x2="9.41941" y2="14.0352" gradientUnits="userSpaceOnUse">
+<stop stop-color="#91A9AA"/>
+<stop offset="1" stop-color="#315D5F"/>
+</linearGradient>
+<linearGradient id="paint3_linear_130_2032" x1="9.41941" y1="7.66797" x2="9.41941" y2="17.636" gradientUnits="userSpaceOnUse">
+<stop stop-color="#91A9AA"/>
+<stop offset="1" stop-color="#315D5F"/>
+</linearGradient>
+</defs>
+</svg></div>
+      <h3>Get insights in your inbox.</h3>
+      <p>One thoughtful email a month. No spam, ever.</p>
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" placeholder="your@email.com" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+           <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="200"
+  height="100"
+  viewBox="0 0 688 262"
+  fill="none">
+
+  <!-- ================= LOGO ICON ================= -->
+
+  <!-- Purple top block -->
+  <path
+    d="M36 65H65V92H36V65Z"
+    fill="#6731F5"/>
+
+  <!-- White left vertical shape -->
+  <path
+    d="M36 103
+       H60.5
+       C64.1 103 67 105.9 67 109.5
+       V208
+       L36 190
+       V103Z"
+    fill="#FFF8E6"/>
+
+  <!-- Purple upper-right shape -->
+  <path
+    d="M84 112.5
+       L113.2 98
+       C115.6 96.8 118.4 96.9 120.8 98.2
+       L162.3 122.5
+       C164.7 123.9 166 126.5 166 129.2
+       V158.7
+       C166 161.7 162.7 163.5 160.1 162
+       L84 118
+       C81.3 116.4 81.3 114 84 112.5Z"
+    fill="#6731F5"/>
+
+  <!-- White lower-right shape -->
+  <path
+    d="M85 175.2
+       L124.2 152.5
+       C126.2 151.3 128.7 151.3 130.7 152.5
+       L164 172.5
+       C166.7 174.1 166.7 178 164 179.6
+       L130.7 199.6
+       C128.7 200.8 126.2 200.8 124.2 199.6
+       L85 176.8
+       C84.4 176.5 84.4 175.6 85 175.2Z"
+    fill="#FFF8E6"/>
+
+
+  <!-- ================= DIVIDER ================= -->
+
+  <rect
+    x="215"
+    y="73"
+    width="3"
+    height="132"
+    rx="1.5"
+    fill="#635D60"/>
+
+
+  <!-- ================= INFINIQ ================= -->
+
+  <text
+    x="270"
+    y="152"
+    font-family="Plus Jakarta Sans, Arial, Helvetica, sans-serif"
+    font-size="113"
+    font-weight="700"
+    letter-spacing="-5"
+    fill="#FFF8E6">
+    infiniq
+  </text>
+
+
+  <!-- ================= STUDIOS ================= -->
+
+  <text
+    x="275"
+    y="205"
+    font-family="Plus Jakarta Sans, Arial, Helvetica, sans-serif"
+    font-size="28"
+    font-weight="400"
+    letter-spacing="19"
+    fill="#6731F5">
+    STUDIOS
+  </text>
+
+</svg>
+        </div>
+        <p>Designing digital products, websites, and marketing systems that help modern businesses grow with confidence.</p>
+        
+        <div class="footer-divider"></div>
+         <div class="footer-col">
+          <h4>contact</h4>
+        </div><div>
+         <a href="https://wa.me/919940809952"
+   class="footer-contact"
+   target="_blank"
+   rel="noopener noreferrer">
+  +91 99408 09952
+</a></div>
+<div>
+       <a href="mailto:hello@infiniqstudios.com"
+   class="footer-contact">
+    hello@infiniqstudios.com
+</a></div>
+        <a href="contact.html" class="btn btn-primary btn-sm">Get In Touch</a>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M13.5 22v-8.4h2.8l.4-3.3h-3.2V8.1c0-.9.3-1.6 1.7-1.6h1.8V3.5C16.6 3.4 15.5 3.3 14.3 3.3c-2.6 0-4.4 1.6-4.4 4.5v2.5H7.1v3.3h2.8V22h3.6z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="X"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M3 3l7.5 9.5L3.4 21H6l5.8-6.4L16.2 21H21l-8-10.2L20.4 3H18l-5.3 5.9L8 3H3z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.9-2 3.9-2 4.2 0 5 2.7 5 6.3V21h-4v-5.4c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="case-studies.html">Case Study</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Development</h4>
+        <ul>
+          <li><a href="services.html#development">Website Development</a></li>
+          <li><a href="services.html#development">E-commerce Development</a></li>
+          <li><a href="services.html#development">Web Application Development</a></li>
+          <li><a href="services.html#development">Mobile App Development</a></li>
+          <li><a href="services.html#development">Maintenance & Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Marketing</h4>
+        <ul>
+          <li><a href="services.html#marketing">Digital Marketing</a></li>
+          <li><a href="services.html#marketing">Search Engine Optimization</a></li>
+          <li><a href="services.html#marketing">Social Media Marketing</a></li>
+          <li><a href="services.html#marketing">Performance Marketing</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026, Infiniq Studios. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookies.html">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

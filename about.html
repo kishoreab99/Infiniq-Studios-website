@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Infiniq Studios</title>
+<meta name="description" content="Infiniq Studios is a small, focused team designing digital products, websites, and marketing systems for modern businesses.">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ABOUT PAGE — VISIBLE NAVBAR OUTLINE */
+.site-header .nav-shell {
+  border: 1px solid rgba(12, 43, 33, 0.18);
+  box-shadow:
+    0 10px 30px -18px rgba(5, 35, 24, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+/* =========================================================
+   ABOUT — WHY CHOOSE US: single source of truth
+========================================================= */
+
+.about-why-box{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #e7e3dc;
+  overflow: hidden;
+}
+
+.about-why-item{
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border-bottom: 1px solid #e7e3dc;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.about-why-item:last-child{
+  border-bottom: none;
+}
+
+.about-why-item-head{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 64px;
+  padding: 14px 18px;
+  pointer-events: auto;
+}
+
+.about-why-item-head *{
+  pointer-events: none;
+}
+
+.about-why-item-head h3{
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.about-why-desc{
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  transition: max-height .35s ease, padding .35s ease;
+}
+
+/* ONLY expand automatically on hover for real mouse/trackpad devices */
+@media (hover: hover) and (pointer: fine){
+  .about-why-item:hover .about-why-desc{
+    max-height: 220px;
+    padding: 0 18px 20px;
+  }
+  .about-why-item:hover{
+    background: #fafaf6;
+  }
+}
+
+/* Tap-driven expand — works on every device, including touch,
+   and is the ONLY thing controlling touch behavior */
+.about-why-item.active .about-why-desc{
+  max-height: 220px;
+  padding: 0 18px 20px;
+}
+
+.about-why-item.active{
+  background: #fafaf6;
+}
+
+@media (max-width: 720px){
+  .about-why-item-head{
+    padding: 14px 16px;
+  }
+  .about-why-desc{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-shell">
+    <a href="index.html" class="brand">
+      <svg width="40.6" height="41.42" viewBox="0 0 235 238" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Purple square -->
+  <path
+    d="M40 20H69C70.657 20 72 21.343 72 23V49C72 50.657 70.657 52 69 52H40C38.343 52 37 50.657 37 49V23C37 21.343 38.343 20 40 20Z"
+    fill="#5F2DF1"
+  />
+
+  <!-- Black vertical shape -->
+  <path
+    d="M43 64H68C71.866 64 75 67.134 75 71V186
+    C69 184 62 180 54 176
+    L43 170
+    C38.5 167.5 36 164 36 159
+    V71
+    C36 67.134 39.134 64 43 64Z"
+    fill="#0E0F0F"
+  />
+
+  <!-- Purple upper shape -->
+  <path
+    d="M98 69
+    L123 59
+    C128 57 132 57 137 60
+    L193 91
+    C196 93 198 96 198 100
+    V128
+    C198 131 195 133 192 131
+    L98 76
+    C95 74 95 71 98 69Z"
+    fill="#5F2DF1"
+  />
+
+  <!-- Black lower shape -->
+  <path
+    d="M98 146
+    L148 121
+    C150 120 152 120 154 121
+    L195 143
+    C197 144 198 146 198 149
+    V155
+    C198 157 197 159 195 160
+    L154 179
+    C151 180 148 180 145 178
+    L98 152
+    C95 150 95 148 98 146Z"
+    fill="#0E0F0F"
+  />
+
+</svg>
+     
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary btn-sm">Get Started</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-cta"><a href="contact.html" class="btn btn-primary btn-block">Get Started</a></div>
+  </div>
+</header>
+
+<section class="hero hero-grey">
+  <div class="hero-inner">
+   <span class="eyebrow on-dark" style="
+    border: 2px solid #B8B6AB;
+    border-radius: 10px;
+    padding: 7px 10px;
+    background: rgba(255,255,255,0.08);
+    color: #00373A;
+">
+    About Us
+</span>
+    <h1 style="font-size:clamp(2rem,4.6vw,3rem); color: #00373a">About Infiniq Studios</h1>
+    <p class="lede" style="color: #71717a; text-align: center;">Infiniq Studios is a digital design and technology company that helps businesses build a strong online presence through modern UI/UX design, website development, web applications, and digital solutions. We combine creativity, strategy, and technology to create digital experiences that are user-focused, visually engaging, and built to support long-term business growth.</p>
+  </div>
+</section>
+
+<section class="story-section">
+  <div class="container story-card">
+
+    <div class="story-content">
+      <span class="section-tag" style="border-color: #b8b6ab; border-width: 2px;">Our Story</span>
+
+      <h2>Started with a vision to help businesses win online.</h2>
+
+      <p>
+        Every business starts with an idea, and Infiniq Studios started with a simple
+        belief — great digital experiences should be accessible to every business,
+        not just large enterprises.
+      </p>
+
+      <p>
+        We founded Infiniq Studios with a vision to help startups, entrepreneurs,
+        and growing businesses transform their ideas into professional digital
+        products. Many businesses struggle with outdated websites, poor user
+        experience, and digital solutions that fail to generate real business results.
+      </p>
+
+      <p>
+        Instead of simply designing websites, we focus on understanding each
+        client's goals, audience, and challenges. This allows us to create solutions
+        that not only look modern but also improve customer experience,
+        strengthen brand identity, and support business growth.
+      </p>
+
+      <p>
+        At Infiniq Studios, every project is treated as a long-term partnership. Our
+        success is measured by the success of our clients.
+      </p>
+    </div>
+
+    <div class="story-visual"></div>
+
+  </div>
+</section>
+<!-- =========================================================
+     ABOUT — VISION & MISSION
+========================================================= -->
+<section class="about-vision-mission">
+  <div class="about-vm-container">
+
+    <div class="about-vm-card">
+      <div>
+        <h3>Our Vision</h3>
+        <p>
+          Our vision is to become a trusted digital solutions partner for businesses
+          across India and beyond, recognized for creativity, innovation, quality,
+          and lasting client relationships. We aim to build digital products that
+          inspire growth, solve real business challenges, and create meaningful
+          experiences for users.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-vm-card">
+      <div>
+        <h3>Our Mission</h3>
+        <p>
+          Our mission is to empower businesses with innovative, user-centric, and
+          scalable digital solutions that help them grow confidently in an
+          ever-evolving digital world. We strive to deliver exceptional quality,
+          transparent collaboration, and measurable value in every project we
+          undertake.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     ABOUT — CORE VALUES
+========================================================= -->
+<section class="about-core-values">
+  <div class="about-values-container">
+
+    <div class="about-values-heading">
+      <span>Core values</span>
+      <h2>
+        The principles that drive<br>
+        every project we deliver.
+      </h2>
+    </div>
+
+    <div class="about-values-grid">
+
+      <!-- Innovation -->
+      <div class="about-value-card">
+        <div class="about-value-icon">
+          <svg width="30" height="30" viewBox="-2 -2 25 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20.5931 10.3678C20.606 8.5299 20.1265 6.72206 19.2046 5.13201C18.2826 3.54196 16.9519 2.22765 15.3505 1.32555C13.7491 0.423447 11.9355 -0.033579 10.0979 0.00192132C8.26022 0.0374192 6.46558 0.564152 4.90024 1.52744C3.33491 2.49073 2.05595 3.85543 1.19615 5.47989C0.336333 7.10438 -0.0729941 8.92939 0.0106764 10.7655C0.0943469 12.6015 0.667958 14.3818 1.67193 15.9213C3.46478 18.6705 4.52623 19.6811 4.52623 22.9528C4.52623 23.2561 4.64677 23.5471 4.86132 23.7618C5.07589 23.9762 5.3669 24.0968 5.67033 24.0968H14.9227C15.2261 24.0968 15.5171 23.9762 15.7317 23.7618C15.9462 23.5471 16.0667 23.2561 16.0667 22.9528C16.0667 19.6022 17.2542 18.6076 19.035 15.758C20.0456 14.1412 20.5852 12.2745 20.5931 10.3678Z"
+        stroke="url(#innovationGradient0)"
+        stroke-width="2.57"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    <path d="M7.15625 29.8481H13.4357"
+        stroke="url(#innovationGradient1)"
+        stroke-width="2.57"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    <defs>
+        <linearGradient id="innovationGradient0"
+            x1="10.2967" y1="0"
+            x2="10.2967" y2="24.0968"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#A6A59A"/>
+            <stop offset="1" stop-color="#6F6D58"/>
+        </linearGradient>
+
+        <linearGradient id="innovationGradient1"
+            x1="10.296" y1="29.8481"
+            x2="10.296" y2="30.8481"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#A6A59A"/>
+            <stop offset="1" stop-color="#6F6D58"/>
+        </linearGradient>
+    </defs>
+</svg>
+        </div>
+
+        <div class="about-value-content">
+          <h3>Innovation</h3>
+          <p>
+            We continuously explore new ideas, technologies, and creative
+            approaches to build modern digital experiences.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- Quality -->
+      <div class="about-value-card">
+        <div class="about-value-icon">
+         <svg width="30" height="30" viewBox="-2 -2 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5.39178 16.5527C3.37643 18.3627 1.14617 20.9082 0 23.7736L4.04025 24.9341L6.91762 29.9152C7.72233 26.4647 9.2816 23.4011 11.254 21.0682"
+        stroke="url(#qualityGradient0)"
+        stroke-width="2.57"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    <path d="M18.542 21.0702C20.5144 23.4032 22.0689 26.4644 22.8736 29.9125L25.7509 24.9314L29.7912 23.7709C28.645 20.9079 26.4243 18.3672 24.4113 16.5596"
+        stroke="url(#qualityGradient1)"
+        stroke-width="2.57"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    <path d="M14.8909 21.4907C21.7679 21.4907 25.6362 17.6224 25.6362 10.7454C25.6362 3.86833 21.7679 0 14.8909 0C8.01384 0 4.14551 3.86833 4.14551 10.7454C4.14551 17.6224 8.01384 21.4907 14.8909 21.4907Z"
+        stroke="url(#qualityGradient2)"
+        stroke-width="2.57"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    <path d="M13.4724 5.97181C13.9977 4.55104 15.9438 4.50806 16.4429 5.93838C16.6363 6.48998 16.8035 7.08455 16.973 7.79614C17.7252 7.78897 18.3627 7.79614 18.9669 7.82957C20.4855 7.91075 21.0945 9.75657 19.8671 10.652C19.5799 10.8609 19.2869 11.0615 18.9884 11.2538C18.8051 11.3718 18.6655 11.5465 18.5909 11.7513C18.5163 11.9562 18.5108 12.1798 18.5753 12.388C18.7591 12.9778 18.9096 13.5103 19.029 14.0284C19.3776 15.4898 17.8159 16.6145 16.6077 15.7238C16.017 15.2821 15.4547 14.8036 14.9242 14.2911C14.4 14.7814 13.8483 15.2414 13.2718 15.6689C12.054 16.562 10.4565 15.4444 10.8123 13.9759C10.9421 13.4443 11.0918 12.9178 11.2613 12.3975C11.3286 12.1876 11.3248 11.9613 11.2506 11.7536C11.1763 11.546 11.0357 11.3686 10.8505 11.249C10.5294 11.0441 10.2149 10.829 9.90734 10.6043C8.69909 9.71358 9.28889 7.89165 10.7908 7.81285C11.4165 7.78181 12.0803 7.77703 12.8778 7.79614C13.0808 7.10366 13.2718 6.51863 13.4748 5.97181H13.4724Z"
+        stroke="url(#qualityGradient3)"
+        stroke-width="2.57"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    <defs>
+        <linearGradient id="qualityGradient0"
+            x1="5.62699" y1="16.5527"
+            x2="5.62699" y2="29.9152"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#A6A59A"/>
+            <stop offset="1" stop-color="#6F6D58"/>
+        </linearGradient>
+
+        <linearGradient id="qualityGradient1"
+            x1="24.1666" y1="16.5596"
+            x2="24.1666" y2="29.9125"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#A6A59A"/>
+            <stop offset="1" stop-color="#6F6D58"/>
+        </linearGradient>
+
+        <linearGradient id="qualityGradient2"
+            x1="14.8909" y1="0"
+            x2="14.8909" y2="21.4907"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#A6A59A"/>
+            <stop offset="1" stop-color="#6F6D58"/>
+        </linearGradient>
+
+        <linearGradient id="qualityGradient3"
+            x1="14.891" y1="4.88574"
+            x2="14.891" y2="16.0402"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#A6A59A"/>
+            <stop offset="1" stop-color="#6F6D58"/>
+        </linearGradient>
+    </defs>
+</svg>
+        </div>
+
+        <div class="about-value-content">
+          <h3>Quality</h3>
+          <p>
+            We believe every project deserves attention to detail, clean
+            execution, and high standards from start to finish.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- Transparency -->
+      <div class="about-value-card">
+        <div class="about-value-icon">
+        <svg width="30" height="30" viewBox="-2 -2 35 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M30.368 8.94563C30.7639 9.43925 30.9831 10.0806 30.9831 10.7455C30.9831 11.4104 30.7639 12.0518 30.368 12.5454C27.8607 15.581 22.1537 21.491 15.4916 21.491C8.82944 21.491 3.12246 15.581 0.615205 12.5454C0.219203 12.0518 0 11.4104 0 10.7455C0 10.0806 0.219203 9.43925 0.615205 8.94563C3.12246 5.91002 8.82944 0 15.4916 0C22.1537 0 27.8607 5.91002 30.368 8.94563Z"
+        stroke="url(#transparencyGradient0)"
+        stroke-width="2.57"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    <path d="M15.4915 15.5212C18.1291 15.5212 20.2673 13.383 20.2673 10.7454C20.2673 8.10789 18.1291 5.96973 15.4915 5.96973C12.854 5.96973 10.7158 8.10789 10.7158 10.7454C10.7158 13.383 12.854 15.5212 15.4915 15.5212Z"
+        stroke="url(#transparencyGradient1)"
+        stroke-width="2.57"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    <defs>
+        <linearGradient id="transparencyGradient0"
+            x1="15.4915" y1="0"
+            x2="15.4915" y2="21.491"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#A6A59A"/>
+            <stop offset="1" stop-color="#6F6D58"/>
+        </linearGradient>
+
+        <linearGradient id="transparencyGradient1"
+            x1="15.4915" y1="5.96973"
+            x2="15.4915" y2="15.5212"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#A6A59A"/>
+            <stop offset="1" stop-color="#6F6D58"/>
+        </linearGradient>
+    </defs>
+</svg>
+        </div>
+
+        <div class="about-value-content">
+          <h3>Transparency</h3>
+          <p>
+            We communicate openly, provide honest guidance, and keep our
+            clients informed throughout every stage of the project.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- Partnership -->
+      <div class="about-value-card">
+        <div class="about-value-icon">
+          <svg width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 1.08105L5.23995 3.90107L9.91719 3.09125C11.4961 2.81789 13.1141 3.26986 14.3228 4.32188" stroke="url(#paint0_linear_202_1631)" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M25.6316 15.88L18.2231 21.1415C16.5945 22.2982 14.4182 22.319 12.7678 21.1938L0 12.4902" stroke="url(#paint1_linear_202_1631)" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30.6942 12.4345L25.4521 16.0166L17.3186 9.44921L14.3269 11.6266C13.1104 12.512 11.411 12.2735 10.4853 11.0874C9.56166 9.90402 9.73984 8.202 10.8885 7.23554L14.0036 4.61451C15.4967 3.35828 17.4376 2.76545 19.3778 2.97305L24.2329 3.4925L30.6942 0" stroke="url(#paint2_linear_202_1631)" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.3193 9.46675C19.2764 11.2104 22.0519 10.3209 23.0839 8.89746" stroke="url(#paint3_linear_202_1631)" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_202_1631" x1="7.16142" y1="1.08105" x2="7.16142" y2="4.32188" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6A59A"/>
+<stop offset="1" stop-color="#6F6D58"/>
+</linearGradient>
+<linearGradient id="paint1_linear_202_1631" x1="12.8158" y1="12.4902" x2="12.8158" y2="22.0236" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6A59A"/>
+<stop offset="1" stop-color="#6F6D58"/>
+</linearGradient>
+<linearGradient id="paint2_linear_202_1631" x1="20.2943" y1="0" x2="20.2943" y2="16.0166" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6A59A"/>
+<stop offset="1" stop-color="#6F6D58"/>
+</linearGradient>
+<linearGradient id="paint3_linear_202_1631" x1="20.2016" y1="8.89746" x2="20.2016" y2="10.4299" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6A59A"/>
+<stop offset="1" stop-color="#6F6D58"/>
+</linearGradient>
+</defs>
+</svg>
+        </div>
+
+        <div class="about-value-content">
+          <h3>Partnership</h3>
+          <p>
+            We work as an extension of our clients' teams, building long-term
+            relationships based on trust and shared success.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- Continuous Learning -->
+      <div class="about-value-card">
+        <div class="about-value-icon">
+          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.2837 6.19615C11.3072 2.92075 7.31315 0.744842 2.94707 0.0202136C1.69292 -0.157395 0.669976 0.859775 0.535922 2.1141C-0.175139 8.76749 -0.182133 12.4869 0.535922 19.1402C0.529579 20.186 1.37889 21.1403 2.41831 21.2553C4.86961 21.5877 7.21582 22.3785 9.34266 23.5674" stroke="url(#paint0_linear_202_1645)" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.2852 10.0588V6.19629" stroke="url(#paint1_linear_202_1645)" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28.033 19.1406C28.8632 12.492 28.9096 8.76336 28.033 2.11446C27.9279 1.3173 26.8761 -0.157044 25.6217 0.0205651C21.2557 0.745196 17.2616 2.92108 14.2852 6.1965" stroke="url(#paint2_linear_202_1645)" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30.2353 30.8069C30.6484 25.8129 26.0702 22.5149 20.684 22.5149V16.2509C20.684 14.6025 19.3476 13.2661 17.6992 13.2661C16.0507 13.2661 14.7143 14.6025 14.7143 16.2509V26.0311L13.5194 26.5433C11.6837 27.3299 10.676 29.0472 10.626 30.8069" stroke="url(#paint3_linear_202_1645)" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_202_1645" x1="7.14186" y1="0" x2="7.14186" y2="23.5674" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6A59A"/>
+<stop offset="1" stop-color="#6F6D58"/>
+</linearGradient>
+<linearGradient id="paint1_linear_202_1645" x1="14.7852" y1="6.19629" x2="14.7852" y2="10.0588" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6A59A"/>
+<stop offset="1" stop-color="#6F6D58"/>
+</linearGradient>
+<linearGradient id="paint2_linear_202_1645" x1="21.4792" y1="0.00585937" x2="21.4792" y2="19.1406" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6A59A"/>
+<stop offset="1" stop-color="#6F6D58"/>
+</linearGradient>
+<linearGradient id="paint3_linear_202_1645" x1="20.4436" y1="13.2661" x2="20.4436" y2="30.8069" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6A59A"/>
+<stop offset="1" stop-color="#6F6D58"/>
+</linearGradient>
+</defs>
+</svg>
+        </div>
+
+        <div class="about-value-content">
+          <h3>Continuous Learning</h3>
+          <p>
+            Technology evolves every day, and so do we. We continuously
+            improve our skills to deliver future-ready digital solutions.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- Customer Success -->
+      <div class="about-value-card">
+        <div class="about-value-icon">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.154597 10.2479C0.378127 12.4503 2.2799 14.0513 4.49034 14.1723C7.85333 14.3563 11.3441 14.5577 14.9241 14.5577C18.5041 14.5577 21.9949 14.3563 25.3578 14.1723C27.5683 14.0513 29.47 12.4503 29.6937 10.2479C29.8998 8.21688 29.8998 6.34088 29.6937 4.30987C29.47 2.10743 27.5683 0.506453 25.3578 0.385467C21.9949 0.201397 18.5041 0 14.9241 0C11.3441 0 7.85333 0.201397 4.49034 0.385467C2.2799 0.506453 0.378127 2.10743 0.154597 4.30987C-0.0515323 6.34088 -0.0515323 8.21688 0.154597 10.2479Z" stroke="url(#paint0_linear_202_1637)" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.4707 8.14227L13.9819 10.7319C15.1635 7.33752 16.1477 5.84799 18.3764 3.82617" stroke="url(#paint1_linear_202_1637)" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.7893 29.848C11.4895 28.6397 10.8064 27.558 9.83902 26.7674C8.80758 25.9242 7.51637 25.4639 6.18424 25.4639C4.85207 25.4639 3.56086 25.9242 2.52943 26.7674C1.56204 27.558 0.878942 28.6397 0.579102 29.848" stroke="url(#paint2_linear_202_1637)" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29.2697 29.848C28.97 28.6397 28.2869 27.558 27.3196 26.7674C26.288 25.9242 24.9969 25.4639 23.6647 25.4639C22.3325 25.4639 21.0413 25.9242 20.0099 26.7674C19.0425 27.558 18.3594 28.6397 18.0596 29.848" stroke="url(#paint3_linear_202_1637)" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.18404 23.5926C8.09433 23.5926 9.16886 22.518 9.16886 20.6079C9.16886 18.6976 8.09433 17.623 6.18404 17.623C4.27375 17.623 3.19922 18.6976 3.19922 20.6079C3.19922 22.518 4.27375 23.5926 6.18404 23.5926Z" stroke="url(#paint4_linear_202_1637)" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23.6644 23.5926C25.5747 23.5926 26.6492 22.518 26.6492 20.6079C26.6492 18.6976 25.5747 17.623 23.6644 17.623C21.7542 17.623 20.6797 18.6976 20.6797 20.6079C20.6797 22.518 21.7542 23.5926 23.6644 23.5926Z" stroke="url(#paint5_linear_202_1637)" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_202_1637" x1="14.9241" y1="0" x2="14.9241" y2="14.5577" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6A59A"/>
+<stop offset="1" stop-color="#6F6D58"/>
+</linearGradient>
+<linearGradient id="paint1_linear_202_1637" x1="14.9236" y1="3.82617" x2="14.9236" y2="10.7319" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6A59A"/>
+<stop offset="1" stop-color="#6F6D58"/>
+</linearGradient>
+<linearGradient id="paint2_linear_202_1637" x1="6.18422" y1="25.4639" x2="6.18422" y2="29.848" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6A59A"/>
+<stop offset="1" stop-color="#6F6D58"/>
+</linearGradient>
+<linearGradient id="paint3_linear_202_1637" x1="23.6646" y1="25.4639" x2="23.6646" y2="29.848" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6A59A"/>
+<stop offset="1" stop-color="#6F6D58"/>
+</linearGradient>
+<linearGradient id="paint4_linear_202_1637" x1="6.18404" y1="17.623" x2="6.18404" y2="23.5926" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6A59A"/>
+<stop offset="1" stop-color="#6F6D58"/>
+</linearGradient>
+<linearGradient id="paint5_linear_202_1637" x1="23.6645" y1="17.623" x2="23.6645" y2="23.5926" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6A59A"/>
+<stop offset="1" stop-color="#6F6D58"/>
+</linearGradient>
+</defs>
+</svg>
+        </div>
+
+        <div class="about-value-content">
+          <h3>Customer Success</h3>
+          <p>
+            Our clients' growth is our greatest achievement. Every solution
+            we build is designed to create measurable business value.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ <!-- =========================================================
+     ABOUT — WHY CHOOSE US
+========================================================= -->
+
+<section class="about-why-choose">
+  <div class="about-why-container">
+
+    <div class="about-why-title">
+      <h2>Why Choose Infiniq Studios</h2>
+    </div>
+
+    <div class="about-why-box">
+
+      <!-- Business-first -->
+      <div class="about-why-item">
+        <div class="about-why-item-head">
+          <div class="about-why-icon orange">
+           <svg width="316" height="330" viewBox="0 0 316 330" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Top-left light ray -->
+  <path
+    d="M91 40L104 67"
+    stroke="url(#orangeGradient)"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+
+  <!-- Top-right light ray -->
+  <path
+    d="M216 40L204 68"
+    stroke="url(#orangeGradient)"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+
+  <!-- Left light ray -->
+  <path
+    d="M42 124H68"
+    stroke="url(#orangeGradient)"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+
+  <!-- Right light ray -->
+  <path
+    d="M249 124H275"
+    stroke="url(#orangeGradient)"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+
+  <!-- Light bulb -->
+  <path
+    d="
+      M158 83
+      C116 83 83 116 83 158
+      C83 180 92 197 105 213
+      C112 222 115 231 115 244
+      L115 248
+      C115 253 119 257 124 257
+      H192
+      C197 257 201 253 201 248
+      V244
+      C201 231 204 222 211 213
+      C224 197 233 180 233 158
+      C233 116 200 83 158 83Z
+    "
+    stroke="url(#orangeGradient)"
+    stroke-width="14"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Bulb bottom/base -->
+  <path
+    d="M122 250H194"
+    stroke="url(#orangeGradient)"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+
+  <!-- Bottom small line -->
+  <path
+    d="M130 290H176"
+    stroke="url(#orangeGradient)"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+
+  <defs>
+    <linearGradient
+      id="orangeGradient"
+      x1="80"
+      y1="40"
+      x2="235"
+      y2="290"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#FFB27F"/>
+      <stop offset="0.5" stop-color="#FF9857"/>
+      <stop offset="1" stop-color="#F4772D"/>
+    </linearGradient>
+  </defs>
+
+</svg>
+          </div>
+          <h3>Business-first<br>approach</h3>
+        </div>
+
+        <div class="about-why-desc">
+          We focus on understanding your business objectives before recommending
+          technology or design solutions, ensuring every project delivers
+          measurable business value.
+        </div>
+      </div>
+
+
+      <!-- Personalized solutions -->
+      <div class="about-why-item">
+        <div class="about-why-item-head">
+          <div class="about-why-icon purple">
+            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.4056 6.36056C12.486 6.16331 12.6234 5.9945 12.8002 5.87566C12.9769 5.75682 13.1851 5.69336 13.3982 5.69336C13.6112 5.69336 13.8194 5.75682 13.9961 5.87566C14.1729 5.9945 14.3102 6.16331 14.3907 6.36056L15.8956 10.0327L19.9728 10.3907C20.1848 10.4094 20.3864 10.4907 20.552 10.6244C20.7175 10.758 20.8396 10.9379 20.9025 11.1411C20.9655 11.3443 20.9666 11.5616 20.9056 11.7655C20.8447 11.9694 20.7244 12.1504 20.5602 12.2857L18.0714 14.3308C17.9188 14.4556 17.8038 14.6202 17.7388 14.8063C17.6736 14.9923 17.6612 15.1928 17.7027 15.3855L18.5173 19.1606C18.5625 19.3691 18.5445 19.5865 18.4654 19.7848C18.3863 19.9831 18.2498 20.1532 18.0734 20.2735C17.8969 20.3936 17.6887 20.4585 17.4753 20.4596C17.2618 20.4607 17.0528 20.3979 16.8752 20.2795L13.3982 17.9536L9.92104 20.2795C9.74347 20.3986 9.53429 20.462 9.32041 20.4613C9.10652 20.4605 8.89775 20.3958 8.72094 20.2755C8.54412 20.1552 8.40736 19.9847 8.32822 19.786C8.24909 19.5873 8.2312 19.3694 8.27687 19.1606L9.09152 15.3855C9.13343 15.1931 9.12163 14.993 9.0573 14.807C8.99305 14.6209 8.87877 14.4561 8.72705 14.3308L6.23608 12.2857C6.07186 12.1504 5.95161 11.9694 5.89065 11.7655C5.82968 11.5616 5.83076 11.3443 5.89376 11.1411C5.95675 10.9379 6.0788 10.758 6.24436 10.6244C6.40993 10.4907 6.61151 10.4094 6.82345 10.3907L10.9007 10.0327L12.4056 6.36056Z" stroke="url(#paint0_linear_113_271)" stroke-width="2.00078" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.3981 26.7961C21.9728 26.7961 26.7961 21.9728 26.7961 13.3981C26.7961 4.8233 21.9728 0 13.3981 0C4.8233 0 0 4.8233 0 13.3981C0 21.9728 4.8233 26.7961 13.3981 26.7961Z" stroke="url(#paint1_linear_113_271)" stroke-width="2.00078" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_113_271" x1="13.3982" y1="5.69336" x2="13.3982" y2="20.4613" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B7A7E6"/>
+<stop offset="1" stop-color="#6240C8"/>
+</linearGradient>
+<linearGradient id="paint1_linear_113_271" x1="13.3981" y1="0" x2="13.3981" y2="26.7961" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B7A7E6"/>
+<stop offset="1" stop-color="#6240C8"/>
+</linearGradient>
+</defs>
+</svg>
+          </div>
+          <h3>Personalized solutions</h3>
+        </div>
+
+        <div class="about-why-desc">
+          We tailor our approach to each client, designing unique strategies
+          and custom digital experiences that align with your goals, audience,
+          and industry.
+        </div>
+      </div>
+
+
+      <!-- Modern technologies -->
+      <div class="about-why-item">
+        <div class="about-why-item-head">
+          <div class="about-why-icon beige"><svg width="585" height="546" viewBox="0 0 585 546" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="personGradient"
+      x1="80" y1="40"
+      x2="500" y2="480"
+      gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D8D7CA"/>
+      <stop offset="1" stop-color="#A6A59A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ========================= -->
+  <!-- TOP LEFT PERSON -->
+  <!-- ========================= -->
+
+  <!-- Head -->
+  <path
+    d="
+      M177 46
+      C134 46 107 74 107 117
+      C107 160 134 189 177 189
+      C220 189 250 160 250 117
+      C250 74 220 46 177 46Z
+    "
+    stroke="url(#personGradient)"
+    stroke-width="32"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Body -->
+  <path
+    d="
+      M97 266
+      C101 219 132 190 177 190
+      C222 190 253 219 257 266
+      Z
+    "
+    stroke="url(#personGradient)"
+    stroke-width="32"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- ========================= -->
+  <!-- TOP RIGHT CONNECTION -->
+  <!-- ========================= -->
+
+  <path
+    d="
+      M343 65
+      C394 65 422 65 444 77
+      C468 90 473 112 473 140
+      L473 176
+    "
+    stroke="url(#personGradient)"
+    stroke-width="32"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- ========================= -->
+  <!-- BOTTOM LEFT CONNECTION -->
+  <!-- ========================= -->
+
+  <path
+    d="
+      M129 358
+      C129 390 132 412 150 428
+      C169 445 193 447 224 448
+    "
+    stroke="url(#personGradient)"
+    stroke-width="32"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- ========================= -->
+  <!-- BOTTOM RIGHT PERSON -->
+  <!-- ========================= -->
+
+  <!-- Head -->
+  <path
+    d="
+      M406 242
+      C365 242 338 270 338 312
+      C338 354 365 382 406 382
+      C447 382 475 354 475 312
+      C475 270 447 242 406 242Z
+    "
+    stroke="url(#personGradient)"
+    stroke-width="32"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Body -->
+  <path
+    d="
+      M325 462
+      C329 414 360 383 406 383
+      C452 383 483 414 487 462
+      Z
+    "
+    stroke="url(#personGradient)"
+    stroke-width="32"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+</svg>
+            
+          </div>
+          <h3>Modern technologies</h3>
+        </div>
+
+        <div class="about-why-desc">
+          We leverage the latest design practices, development frameworks, and
+          digital technologies to build secure, fast, and future-ready products.
+        </div>
+      </div>
+
+
+      <!-- Scalable solutions -->
+      <div class="about-why-item">
+        <div class="about-why-item-head">
+          <div class="about-why-icon green">
+            <svg width="722" height="635" viewBox="0 0 722 635" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient
+      id="greenGradient"
+      x1="105"
+      y1="90"
+      x2="560"
+      y2="550"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#5CE989"/>
+      <stop offset="0.5" stop-color="#20D965"/>
+      <stop offset="1" stop-color="#00B63A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- LEFT PAGE -->
+  <path
+    d="
+      M321 190
+      C278 151 226 119 165 104
+      C141 98 120 114 117 139
+      C108 217 105 300 117 376
+      C120 397 135 409 157 413
+      C193 419 230 431 252 442
+    "
+    stroke="url(#greenGradient)"
+    stroke-width="32"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- RIGHT PAGE -->
+  <path
+    d="
+      M321 190
+      C365 151 417 119 478 104
+      C502 98 523 114 526 139
+      C535 217 538 300 526 376
+      "
+    stroke="url(#greenGradient)"
+    stroke-width="32"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- CENTER BOOK FOLD -->
+  <path
+    d="
+      M321 190
+      C321 212 321 235 321 248
+    "
+    stroke="url(#greenGradient)"
+    stroke-width="32"
+    stroke-linecap="round"
+  />
+
+  <!-- BOOKMARK / CENTER LOWER PAGE -->
+  <path
+    d="
+      M371 545
+      C371 516 371 486 371 457
+      V333
+      C371 307 390 289 414 289
+      C438 289 457 307 457 333
+      V424
+      C457 434 465 441 475 442
+      C513 447 542 461 565 481
+      C579 494 587 510 590 527
+    "
+    stroke="url(#greenGradient)"
+    stroke-width="32"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- LOWER LEFT PAGE -->
+  <path
+    d="
+      M371 467
+      C337 476 316 493 302 515
+      C294 527 288 539 286 548
+    "
+    stroke="url(#greenGradient)"
+    stroke-width="32"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- LOWER RIGHT PAGE -->
+  <path
+    d="
+      M457 424
+      C457 424 462 425 475 427
+      C521 434 556 452 578 478
+      C588 491 593 508 594 527
+    "
+    stroke="url(#greenGradient)"
+    stroke-width="32"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+</svg>
+          </div>
+          <h3>Scalable solutions</h3>
+        </div>
+
+        <div class="about-why-desc">
+          Our solutions are designed to grow with your business, making it
+          easier to expand features, users, and capabilities as your company
+          evolves.
+        </div>
+      </div>
+
+
+      <!-- Transparent communication -->
+      <div class="about-why-item">
+        <div class="about-why-item-head">
+          <div class="about-why-icon blue">
+           <svg width="540" height="572" viewBox="0 0 540 572" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient
+      id="tealGradient"
+      x1="180"
+      y1="70"
+      x2="390"
+      y2="530"
+      gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#91A9AA"/>
+      <stop offset="0.5" stop-color="#527A7C"/>
+      <stop offset="1" stop-color="#00373A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ========================= -->
+  <!-- LEFT / PROFILE OUTLINE -->
+  <!-- ========================= -->
+
+  <!-- Main rounded profile frame -->
+  <path
+    d="
+      M204 177
+      C166 178 128 180 105 188
+      C71 199 53 224 48 259
+      C43 297 39 348 43 397
+      C47 446 68 482 104 501
+      C139 520 191 527 244 528
+      C298 529 351 526 382 511
+      C412 497 425 471 429 436
+      C431 416 431 395 431 377
+    "
+    stroke="url(#tealGradient)"
+    stroke-width="31"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- ========================= -->
+  <!-- PROFILE HEAD -->
+  <!-- ========================= -->
+
+  <path
+    d="
+      M222 263
+      C182 263 155 290 155 328
+      C155 367 182 390 222 390
+      C262 390 289 367 289 328
+      C289 290 262 263 222 263Z
+    "
+    stroke="url(#tealGradient)"
+    stroke-width="31"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- ========================= -->
+  <!-- PROFILE BODY -->
+  <!-- ========================= -->
+
+  <path
+    d="
+      M111 506
+      C117 457 155 424 207 420
+      C259 416 303 448 319 500
+      C322 509 324 518 325 527
+    "
+    stroke="url(#tealGradient)"
+    stroke-width="31"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- ========================= -->
+  <!-- TOP RIGHT SPARKLE -->
+  <!-- ========================= -->
+
+  <path
+    d="
+      M385 78
+      C394 78 401 84 405 94
+      C416 120 430 134 456 146
+      C466 151 472 160 472 171
+      C472 181 466 190 456 195
+      C430 207 416 221 405 247
+      C401 257 394 263 384 263
+      C374 263 367 257 363 247
+      C352 221 338 207 312 195
+      C302 190 296 181 296 171
+      C296 160 302 151 312 146
+      C338 134 352 120 363 94
+      C367 84 374 78 385 78Z
+    "
+    stroke="url(#tealGradient)"
+    stroke-width="30"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+</svg>
+          </div>
+          <h3>Transparent<br>communication</h3>
+        </div>
+
+        <div class="about-why-desc">
+          We keep you informed at every stage with clear updates, honest
+          feedback, and a direct line to the people working on your project.
+        </div>
+      </div>
+
+
+      <!-- Reliable long-term support — DEFAULT OPEN -->
+      <div class="about-why-item active">
+        <div class="about-why-item-head">
+          <div class="about-why-icon orange">
+    <svg width="316" height="330" viewBox="0 0 316 330" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Top-left light ray -->
+  <path
+    d="M91 40L104 67"
+    stroke="url(#orangeGradient)"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+
+  <!-- Top-right light ray -->
+  <path
+    d="M216 40L204 68"
+    stroke="url(#orangeGradient)"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+
+  <!-- Left light ray -->
+  <path
+    d="M42 124H68"
+    stroke="url(#orangeGradient)"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+
+  <!-- Right light ray -->
+  <path
+    d="M249 124H275"
+    stroke="url(#orangeGradient)"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+
+  <!-- Light bulb -->
+  <path
+    d="
+      M158 83
+      C116 83 83 116 83 158
+      C83 180 92 197 105 213
+      C112 222 115 231 115 244
+      L115 248
+      C115 253 119 257 124 257
+      H192
+      C197 257 201 253 201 248
+      V244
+      C201 231 204 222 211 213
+      C224 197 233 180 233 158
+      C233 116 200 83 158 83Z
+    "
+    stroke="url(#orangeGradient)"
+    stroke-width="14"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Bulb bottom/base -->
+  <path
+    d="M122 250H194"
+    stroke="url(#orangeGradient)"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+
+  <!-- Bottom small line -->
+  <path
+    d="M130 290H176"
+    stroke="url(#orangeGradient)"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+
+  <defs>
+    <linearGradient
+      id="orangeGradient"
+      x1="80"
+      y1="40"
+      x2="235"
+      y2="290"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#FFB27F"/>
+      <stop offset="0.5" stop-color="#FF9857"/>
+      <stop offset="1" stop-color="#F4772D"/>
+    </linearGradient>
+  </defs>
+
+</svg>
+          </div>
+          <h3>Reliable long-term<br>support</h3>
+        </div>
+
+        <div class="about-why-desc">
+          Our partnership doesn't end after launch. We provide continuous
+          maintenance, updates, performance optimization, and technical support
+          to ensure your digital products continue to perform at their best.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+
+/* MAIN BOX */
+.about-why-box {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #e7e3dc;
+  overflow: hidden;
+}
+
+
+/* EACH ITEM */
+.about-why-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border-bottom: 1px solid #e7e3dc;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.about-why-item:last-child {
+  border-bottom: none;
+}
+
+
+/* HEADER */
+.about-why-item-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 64px;
+  padding: 14px 18px;
+  pointer-events: auto;
+}
+
+.about-why-item-head * {
+  pointer-events: none;
+}
+
+.about-why-item-head h3 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+}
+
+
+/* DESCRIPTION CLOSED BY DEFAULT */
+.about-why-desc {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.6;
+
+  transition:
+    max-height .35s ease,
+    padding .35s ease;
+}
+
+
+/* DEFAULT OPEN ITEM */
+.about-why-item.active .about-why-desc {
+  max-height: 220px;
+  padding: 0 18px 20px;
+}
+
+.about-why-item.active {
+  background: #fafaf6;
+}
+
+
+/* DESKTOP HOVER */
+@media (hover: hover) and (pointer: fine) {
+
+  .about-why-item:hover .about-why-desc {
+    max-height: 220px;
+    padding: 0 18px 20px;
+  }
+
+  .about-why-item:hover {
+    background: #fafaf6;
+  }
+
+}
+
+
+/* MOBILE / TABLET */
+@media (max-width: 720px) {
+
+  .about-why-item-head {
+    padding: 14px 16px;
+  }
+
+  .about-why-desc {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about-why-item.active .about-why-desc {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 18px;
+  }
+
+}
+
+</style>
+<!-- =========================================================
+     ABOUT — FINAL CTA
+========================================================= -->
+<section class="about-final-cta">
+  <div class="about-cta-grid"></div>
+
+  <div class="about-cta-content">
+    <span>Ready to Start?</span>
+
+    <h2>
+      Let's Build Something Amazing<br>
+      Together
+    </h2>
+
+    <p>
+      Ready to transform your digital presence? Get in touch with us today
+      and let's discuss how we can help you achieve your goals.
+    </p>
+
+    <div class="about-cta-buttons">
+      <a href="contact.html" class="about-cta-btn">
+        Get Free Consultation
+        <span>→</span>
+      </a>
+
+      <a href="services.html" class="about-cta-btn">
+        View Our Services
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+.story-section {
+  padding: 48px 0 64px;
+  background: #ffffff;
+}
+
+.story-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 54px;
+  align-items: stretch;
+  background: linear-gradient(135deg, #fbfaf2 0%, #f5f1df 100%);
+  border-radius: 30px;
+  padding: 32px 32px 32px 54px;
+  box-sizing: border-box;
+}
+
+.story-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.story-content .section-tag {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: 6px 10px;
+  margin-bottom: 16px;
+  border: 1px solid #d9d5c5;
+  border-radius: 7px;
+  background: #f5f2e7;
+  color: #687067;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.story-content h2 {
+  max-width: 560px;
+  margin: 0 0 12px;
+  color: #00373a;
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.story-content p {
+  max-width: 560px;
+  margin: 0 0 24px;
+  color: #6c6d78;
+  font-family: var(--font-body);
+  font-size: 0.91rem;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.story-content p:last-child {
+  margin-bottom: 0;
+}
+
+.story-visual {
+  min-height: 535px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    #dddcd0 0%,
+    #e5e3d5 45%,
+    #f0eee2 100%
+  );
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .story-card {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 36px;
+  }
+
+  .story-visual {
+    min-height: 380px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .story-section {
+    padding: 32px 0 48px;
+  }
+
+  .story-card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 28px 22px;
+    border-radius: 24px;
+  }
+
+  .story-content h2 {
+    font-size: 1.45rem;
+  }
+
+  .story-content p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+
+  .story-visual {
+    min-height: 280px;
+    border-radius: 14px;
+  }
+}
+/* =========================================================
+   WHY CHOOSE US — HOVER / TAP ACCORDION
+========================================================= */
+
+.about-why-box {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e7e3dc;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.about-why-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+
+  border-bottom: 1px solid #e7e3dc;
+  cursor: pointer;
+
+  transition: background 0.25s ease;
+}
+
+.about-why-item:last-child {
+  border-bottom: none;
+}
+
+
+/* HEADER */
+
+.about-why-item-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  min-height: 64px;
+  padding: 14px 18px;
+
+  pointer-events: auto;
+}
+
+.about-why-item-head * {
+  pointer-events: none;
+}
+
+.about-why-item-head h3 {
+  margin: 0;
+
+  font-family: var(--font-display);
+  color: var(--ink);
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+
+/* DESCRIPTION CLOSED BY DEFAULT */
+
+.about-why-desc {
+  max-height: 0;
+  overflow: hidden;
+
+  padding: 0 18px;
+
+  color: var(--muted);
+  font-family: var(--font-body);
+
+  font-size: 0.88rem;
+  line-height: 1.6;
+
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease;
+}
+
+
+/* OPEN ITEM */
+
+.about-why-item.active .about-why-desc {
+  max-height: 220px;
+  padding: 0 18px 20px;
+}
+
+.about-why-item.active {
+  background: #fafaf6;
+}
+
+
+/* =========================================================
+   DESKTOP
+   Mouse hover = show details
+========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .about-why-item:hover .about-why-desc {
+    max-height: 220px;
+    padding: 0 18px 20px;
+  }
+
+  .about-why-item:hover {
+    background: #fafaf6;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET + PHONE
+   Tap acts exactly like hover
+========================================================= */
+
+@media (hover: none) {
+
+  .about-why-item.active .about-why-desc {
+    max-height: 220px;
+    padding: 0 18px 20px;
+  }
+
+  .about-why-item.active {
+    background: #fafaf6;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 720px) {
+
+  .about-why-item-head {
+    padding: 14px 16px;
+  }
+
+  .about-why-desc {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about-why-item.active .about-why-desc {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 18px;
+  }
+
+}
+</style>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+           <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="200"
+  height="100"
+  viewBox="0 0 688 262"
+  fill="none">
+
+  <!-- ================= LOGO ICON ================= -->
+
+  <!-- Purple top block -->
+  <path
+    d="M36 65H65V92H36V65Z"
+    fill="#6731F5"/>
+
+  <!-- White left vertical shape -->
+  <path
+    d="M36 103
+       H60.5
+       C64.1 103 67 105.9 67 109.5
+       V208
+       L36 190
+       V103Z"
+    fill="#FFF8E6"/>
+
+  <!-- Purple upper-right shape -->
+  <path
+    d="M84 112.5
+       L113.2 98
+       C115.6 96.8 118.4 96.9 120.8 98.2
+       L162.3 122.5
+       C164.7 123.9 166 126.5 166 129.2
+       V158.7
+       C166 161.7 162.7 163.5 160.1 162
+       L84 118
+       C81.3 116.4 81.3 114 84 112.5Z"
+    fill="#6731F5"/>
+
+  <!-- White lower-right shape -->
+  <path
+    d="M85 175.2
+       L124.2 152.5
+       C126.2 151.3 128.7 151.3 130.7 152.5
+       L164 172.5
+       C166.7 174.1 166.7 178 164 179.6
+       L130.7 199.6
+       C128.7 200.8 126.2 200.8 124.2 199.6
+       L85 176.8
+       C84.4 176.5 84.4 175.6 85 175.2Z"
+    fill="#FFF8E6"/>
+
+
+  <!-- ================= DIVIDER ================= -->
+
+  <rect
+    x="215"
+    y="73"
+    width="3"
+    height="132"
+    rx="1.5"
+    fill="#635D60"/>
+
+
+  <!-- ================= INFINIQ ================= -->
+
+  <text
+    x="270"
+    y="152"
+    font-family="Plus Jakarta Sans, Arial, Helvetica, sans-serif"
+    font-size="113"
+    font-weight="700"
+    letter-spacing="-5"
+    fill="#FFF8E6">
+    infiniq
+  </text>
+
+
+  <!-- ================= STUDIOS ================= -->
+
+  <text
+    x="275"
+    y="205"
+    font-family="Plus Jakarta Sans, Arial, Helvetica, sans-serif"
+    font-size="28"
+    font-weight="400"
+    letter-spacing="19"
+    fill="#6731F5">
+    STUDIOS
+  </text>
+
+</svg>
+        </div>
+        <p>Designing digital products, websites, and marketing systems that help modern businesses grow with confidence.</p>
+        
+        <div class="footer-divider"></div>
+         <div class="footer-col">
+          <h4>contact</h4>
+        </div><div>
+         <a href="https://wa.me/919940809952"
+   class="footer-contact"
+   target="_blank"
+   rel="noopener noreferrer">
+  +91 99408 09952
+</a></div><div>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=infiniqstudios@gmail.com"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="footer-contact">
+  infiniqstudios@gmail.com
+</a></div>
+        <a href="contact.html" class="btn btn-primary btn-sm">Get In Touch</a>
+        <div class="social-row">
+          <a href="https://www.facebook.com/profile.php?id=61592245306765" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M13.5 22v-8.4h2.8l.4-3.3h-3.2V8.1c0-.9.3-1.6 1.7-1.6h1.8V3.5C16.6 3.4 15.5 3.3 14.3 3.3c-2.6 0-4.4 1.6-4.4 4.5v2.5H7.1v3.3h2.8V22h3.6z"/></svg></a>
+          <a href="https://www.instagram.com/infiniqstudios/?hl=en" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="X"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M3 3l7.5 9.5L3.4 21H6l5.8-6.4L16.2 21H21l-8-10.2L20.4 3H18l-5.3 5.9L8 3H3z"/></svg></a>
+          <a href="https://www.linkedin.com/company/infiniqstudios/" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.9-2 3.9-2 4.2 0 5 2.7 5 6.3V21h-4v-5.4c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="case-studies.html">Case Study</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Development</h4>
+        <ul>
+          <li><a href="services.html#development">Website Development</a></li>
+          <li><a href="services.html#development">E-commerce Development</a></li>
+          <li><a href="services.html#development">Web Application Development</a></li>
+          <li><a href="services.html#development">Mobile App Development</a></li>
+          <li><a href="services.html#development">Maintenance & Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Marketing</h4>
+        <ul>
+          <li><a href="services.html#marketing">Digital Marketing</a></li>
+          <li><a href="services.html#marketing">Search Engine Optimization</a></li>
+          <li><a href="services.html#marketing">Social Media Marketing</a></li>
+          <li><a href="services.html#marketing">Performance Marketing</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026, Infiniq Studios. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookies.html">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+document.addEventListener('click', function (e) {
+  const head = e.target.closest('.about-why-item-head');
+  if (!head) return;
+
+  const item = head.closest('.about-why-item');
+  if (!item) return;
+
+  const wasActive = item.classList.contains('active');
+
+  document.querySelectorAll('.about-why-item.active').forEach(function (i) {
+    i.classList.remove('active');
+  });
+
+  if (!wasActive) {
+    item.classList.add('active');
+  }
+});
+</script>
+</body>
+</html>
